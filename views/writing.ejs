@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function null_check(){
+            var title = document.getElementById('title').value;
+            var content = document.getElementById('content').value;
+            if(title===null)alert('제목을 입력해주세요!');
+            if(content===null)alert('내용을 입력해주세요!');
+            
+        }
+    </script>
+</head>
+<body>
+    <form action="/community/post" method="post">
+        <table>
+            <tr>
+                <td>제목 : </td>
+                <td><input type="text" name="Title" id="title"></td>
+            </tr>
+            <tr>
+                <td>내용 : </td>
+                <td><input type="text" name="Content" id="content"></td>
+            </tr>
+                <td>Hashtag : </td>
+                <td><input type="text" name="Hashtags" id="hashtag_input"></td>
+            <tr>
+                <td>
+
+                </td>
+                <td><input type="submit" onclick ="null_check()" value="제출"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
